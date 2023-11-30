@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/logos.png" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Photos</title>
+</head>
+<body>
+    
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars" id="btn"></i>
+            <i class="fa fa-times" id="cancel"></i>
+        </label>
+
+        <label class="logo">
+            <a href="/about.html">
+           <img src="/logos.png" alt="LOGO">
+           </a>
+       </label>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a  class="active" href="photo gallery.html">Photo Gallery</a></li>
+            <li><a href="reference.html">Reference</a></li>
+            <li><a href="contact.html"  target="_blank">Contact Me</a></li>
+            <li><a href="about.html"  target="_blank">About</a></li>
+        </ul>
+    </nav>
+
+    <section>
+
+        <div class="container-img">
+            <h2>Image Gallery</h2>
+
+                <div class="gallery-con">
+
+                    <div class="image">
+                        <img src="/Images/photo_1.jpg" alt="">
+                    </div>
+
+                    <div class="image">
+                        <img src="/Images/photo_10.jpg" alt="">
+                    </div>
+
+                    <div class="image">
+                        <img src="/Images/photo_12.jpg" alt="">
+                    </div>
+
+                    <div class="image">
+                        <img src="/Images/photo_16.jpg" alt="">
+                    </div>
+
+                    <div class="image">
+                        <img src="/Images/photo_7.jpg" alt="">
+                    </div>
+
+                    <div class="image">
+                        <img src="/Images/photo_4.jpg" alt="">
+                    </div>
+
+                    <div class="image">
+                        <img src="/Images/photo_.jpg" alt="">
+                    </div>
+
+                    <div class="image">
+                        <img src="/Images/photo_7.jpg" alt="">
+                    </div>
+
+                    <div class="image">
+                        <img src="/Images/photo_6.jpg" alt="">
+                    </div>
+
+                    <div class="image">
+                        <img src="/Images/photo_3.jpg" alt="">
+                    </div>
+
+                    <div class="image">
+                        <img src="/Images/photo_9.jpg" alt="">
+                    </div>
+
+                    <div class="image">
+                        <img src="/Images/photo_10.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="/Images/photo_9.jpg" alt="">
+                </div>
+        </div>
+        
+
+    
+        <h6>Contact Me Via</h6>
+        <div class="footer-container">
+    
+            <div class="divider"></div>
+            <p id="copyright"></p>
+            <div class="social-icons">
+                <a href="https://web.facebook.com/oliver.adamtey.923"><img src="Images/facebook.svg" alt=""></a>
+                <a href="https://www.youtube.com/channel/UCqIUeRmPDpVDjhcZ9u_jqLg"><img src="Images/youtube.svg" alt=""></a>
+                <a href="https://www.instagram.com/yvonnebadder5/"><img src="Images/instagram.svg" alt=""></a>
+                <a href="https://twitter.com/OliverKweku"><img src="Images/twitter.svg" alt=""></a>
+            </div>
+    
+        </div>
+    
+        
+            <script src="/JavaScripts/fuc.js"></script>
+    </section>
+    
+    <script>
+        document.querySelectorAll('.gallery-con img').forEach(image =>{
+            image.onclick = () => {
+            document.querySelector('.popup-image').style.display = 'block';
+            document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        }); 
+
+        document.querySelector('.popup-image span').onclick = () => {
+        document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
